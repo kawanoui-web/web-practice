@@ -41,3 +41,34 @@ for (let i = 0; i < fruits.length; i++) {
 }
 
 fruitListDiv.innerHTML = listHTML;
+
+let shop = {
+  name: "カフェ花もも",
+  area: "千葉県習志野市",
+  open: true
+};
+
+console.log(shop);
+console.log(shop.name);
+console.log(shop.area);
+
+
+
+let shops = [
+  { name: "カフェ花もも", area: "千葉県習志野市" },
+  { name: "整体サロンBLOOM", area: "千葉県市川市" },
+  { name: "リラクゼーション凛", area: "千葉県船橋市" },
+];
+
+for (let i = 0; i < shops.length; i++) {
+    console.log(shops[i].name + " (" + shops[i].area + ") ");
+}
+
+let shopListDiv = document.getElementById("shop-list");
+let shopHTML = "";
+
+for (let i =0; i < shops.length; i++) {
+    shopHTML = shopHTML + "<p>" + shops[i].name + " (" + shops[i].area +" )</p>";
+}
+
+shopListDiv.innerHTML =shopHTML;
